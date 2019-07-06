@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Footer template</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    
+<footer>
+    <section class="footers pt-2 pb-2">
+       <div class="container-fluid pt-5 text-center">
+           <div class="row">
+               <div class="col-xs-12 col-sm-6 col-md-3 px-4 footers-one">
+                    <div class="footers-logo text-center">
+                        <img src="images/Cherry_Media_Logo_black_letter.png" alt="Logo">
+                    </div>
+                    <div class="footers-info mt-3">
+                        <p>Cras sociis natoque penatibus et magnis Lorem Ipsum tells about the compmany right now the best.</p>
+                    </div>
+                </div>
+               <div class="col-xs-12 col-sm-6 col-md-3 footers-two">
+                    <h5>EXPLORE </h5>
+                    <ul class="list-unstyled">
+                     <li><a href="#!">Tasks</a></li>
+                     <li><a href="#!">My Tasks</a></li>
+                     <li><a href="#!">Books</a></li>
+                     <li><a href="#!">Profile</a>
+                         <ul class="list-unstyled sublist">
+                             <li><a href="#!">Two-Factor settings</a></li>
+                             <li><a href="#!">Change Email</a></li>
+                             <li><a href="#!">Change Password</a></li>
+                             <li><a href="#!">Logout</a></li>
+                         </ul>
+                     </li>
+                     <li><a href="#!">Import CSV</a></li>
+                     <li><a href="#!">Contact Us</a></li>
+                    </ul>
+                </div>
+               <div class="col-xs-12 col-sm-6 col-md-3 footers-three">
+                    <h5>USEFUL LINKS </h5>
+                    <ul class="list-unstyled">
+                     <li><a href="#!">Privacy</a></li>
+                     <li><a href="#!">Terms and Conditions</a></li>
+                     <li><a href="#!">Legal Notice</a></li>
+                     <li><a href="#!l">Sitemap</a></li>
+                    </ul>
+                </div>
+               <div class="col-xs-12 col-sm-6 col-md-3 footers-four">
+                    <h5>CONTACT </h5>
+                    <ul class="list-unstyled">
+                     <li><a href="#!">Phone 1</a></li>
+                     <li><a href="#!">Phone 2</a></li>
+                     <li><a href="#!">Address</a></li>
+                     <li><a href="#!">Email</a></li>
+                    </ul>
+                </div>
+
+           </div>
+       </div>
+    </section>
+    <section class="copyright">
+        <div class="container-fluid">
+            <div class="row text-center">
+                <div class="col-md-12 pt-3">
+                    <p>© <span id="copyright"></span> Cherry Media. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</footer>
+   
+    <script src="script/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        //Dinamicly change year in footer copyright area
+        let copyright = document.getElementById('copyright');
+        let thisYear = new Date().getFullYear();
+        copyright.textContent = thisYear;
+    </script>
+</body>
+</html>
