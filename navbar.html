@@ -12,9 +12,9 @@
 
 <body>
     <div class="page-wrapper chiller-theme toggled">
-            <a id="show-sidebar" class="btn btn-sm" href="#!">
-                <i class="fas fa-bars fa-lg"></i>
-            </a>
+        <a id="show-sidebar" class="btn btn-sm" href="#!">
+            <i class="fas fa-bars fa-lg"></i>
+        </a>
         <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
                 <div class="sidebar-header">
@@ -110,40 +110,136 @@
         <!-- sidebar-wrapper  -->
         <main class="page-content">
             <div class="container-fluid">
-              
-               
-<!-- form card change password -->
-<div class="change_pass_form">
-    <div class="col-md-4 offset-md-4">
-        <div class="card-body">
-            <h3 class="mb-0 text-center">Change Password</h3>
-        </div>
-        <div class="card-body">
-            <form class="form" role="form" autocomplete="off">
-                <div class="form-group">
-                    <label class="sr-only" for="inputPasswordOld">Current Password</label>
-                    <input type="password" class="form-control" id="inputPasswordOld" placeholder="Current Password">
+
+
+                <!-- form card 2FA settings -->
+                <div class="two_fa_settings_form mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card-body two_fa_settings_header">
+                            <h3 class="mb-0">ACCOUNT SECURITY</h3>
+                        </div>
+                        <div class="card-body">
+                           <h6>Primary method: Send text message to +38* ** *** *11</h6>
+                           <div class="form-group two_fa_settings_btn_container">
+                               <h4>Backup Phone Numbers</h4>
+                               <p>If your primary method is not available, we are able to send backup tokens to the phone numbers listed below</p>
+                               <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
+                           </div>
+                           <div class="form-group two_fa_settings_btn_container">
+                               <h4>Backup tokens</h4>
+                               <p>If you don't have any device with you, you can access your account using backup tokens. You have 10 backup tokens remaining.</p>
+                               <button type="submit" class="two_fa_settings_btn">Show Codes</button>
+                           </div>
+                           <div class="form-group two_fa_settings_btn_container">
+                               <h4>Disable Two-Factor Authentication</h4>
+                               <p>We strongly discourage you to do so, you can disable two-factor authentication for your account</p>
+                               <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
+                           </div>
+                            <a class="two_fa_settings_disable" href="#!">Disable Two-Factor Authentiacion</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="sr-only" for="inputPasswordNew">New Password</label>
-                    <input type="password" class="form-control" id="inputPasswordNew" placeholder="New Password">
+                <!-- /form card 2FA settings -->
+
+
+                <!-- form card change email -->
+                <div class="change_email_form mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card-body change_email_header">
+                            <h3 class="mb-0">CHANGE EMAIL</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <h5 class="text-center mb-4">The following e-mail addresses are associated with your account:</h5>
+                                <div class="form-group text-center checkbox_option mb-4">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="optradio">example@example.com
+                                    </label>
+                                    <label>Unverified Primary</label>
+                                </div>
+                                <div class="form-group button_group mb-4 text-center">
+                                    <button type="submit" class="make_primary">Make Primary</button>
+                                    <button type="submit" class="remove">Remove</button>
+                                    <button type="submit" class="re_send_ver">Re-send Verification</button>
+                                </div>
+
+                                <div class="form-group">
+                                    <h4 for="inputPasswordNewVerify">Add E-mail Address</h4>
+                                    <div class="email_input_group">
+                                        <div class="email_input_container">
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">
+                                                        <img src="images/envelope_profile_forms.svg" alt="">
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="submit" class="add_email">Add E-mail</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label class="sr-only" for="inputPasswordNewVerify">Verify</label>
-                    <input type="password" class="form-control" id="inputPasswordNewVerify" placeholder="Confirm Password">
+                <!-- /form card change email -->
+
+
+
+                <!-- form card change password -->
+                <div class="change_pass_form mt-4">
+                    <div class="col-md-6 offset-md-3">
+                        <div class="card-body change_pass_header">
+                            <h3 class="mb-0">CHANGE PASSWORD</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="pass_form" role="form" autocomplete="off">
+                               
+                                <div class="pass_input_container">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <img src="images/change_password_lock.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Old Password" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <div class="pass_input_container">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <img src="images/change_password_lock.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="New Password" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <div class="pass_input_container">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="basic-addon1">
+                                                <img src="images/change_password_lock.svg" alt="">
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Confirm New Password" aria-label="Username" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group change_pass_btn_container">
+                                    <button type="submit" class="change_pass_btn">Change Password</button>
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <button type="submit" class="change_pass_btn">Change Password</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-<!-- /form card change password -->
-               
-               
-               
-      
+                <!-- /form card change password -->
+
+
                 <h2>Lorem Ipsum</h2>
                 <hr>
                 <div class="row">
