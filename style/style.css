@@ -799,7 +799,7 @@ footer .useful-links li{
 
 /* ====- PHONE BACKUP CSS -==== */
 .backup_phone_form  .backup_phone_header{
-    background: url('../images/2FA_banner.png') no-repeat;
+    background: url('../images/phone_backup.png') no-repeat;
     background-size: cover;
     background-position: top;
     border-top-left-radius: 8px;
@@ -844,7 +844,7 @@ footer .useful-links li{
 
 /* ====- TOKEN BACKUP CSS -==== */
 .backup_token_form  .backup_token_header{
-    background: url('../images/2FA_banner.png') no-repeat;
+    background: url('../images/token_security.png') no-repeat;
     background-size: cover;
     background-position: top;
     border-top-left-radius: 8px;
@@ -889,7 +889,7 @@ footer .useful-links li{
 
 /* ====- TOKEN LIST CSS -==== */
 .token_list_form .token_list_header{
-    background: url('../images/2FA_banner.png') no-repeat;
+    background: url('../images/token_security.png') no-repeat;
     background-size: cover;
     background-position: top;
     border-top-left-radius: 8px;
