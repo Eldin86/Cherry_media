@@ -111,9 +111,114 @@
         <main class="page-content">
             <div class="container-fluid">
 
-                
-               <!-- token list -->
-                   <div class="token_list_form mt-4">
+
+
+                <!-- Upload section - list of files -->
+                <div class="upload_files_section_container">
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="widget blank">
+                                <div class="panel panel-default">
+                                    <!-- Default panel contents -->
+                                    <div class="panel-heading py-4 pl-3">
+                                        <div class="row">
+                                            <div class="col-4 col-md-1 text-center">
+                                                <img src="images/folder_icon.png">
+                                            </div>
+                                            <div class="heading_info col-8 col-md-7">
+                                                <h3>Documents</h3>
+                                                <p>
+                                                    <span>9 items </span>&#160; <span>Last modified: 27.7.2019, 20:15</span>
+                                                </p>
+                                            </div>
+                                            <div class="col-12 col-md-4">
+                                                <div class="form-group">
+                                                    <form action="" class="upload_files text-right">
+                                                        <div class="mr-4">
+                                                            <span class="text-left" id="custom-text">No file chosen, yet</span>
+                                                            <input type="file" id="real-file">
+                                                            <button type="button" id="custom-button"><img src="images/upload.png" alt=""></button>
+                                                        </div>
+                                                        <div class="mr-5">
+                                                            <input class="upload_files_btn" type="submit" value="Upload">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Table -->
+                                    <table id="file_list_table" class="table sortable">
+                                        <thead>
+                                            <tr>
+                                                <th class="pr-0">Name</th>
+                                                <th class="pr-0">Modified</th>
+                                                <th class="pr-0">Type</th>
+                                                <th class="pr-0">Size</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><img src="images/file_icon.png" class="mr-2" alt="file icon" width="25px">Fluent design specs</td>
+                                                <td>Just now</td>
+                                                <td>File folder</td>
+                                                <td>0.15 MB</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/file_icon.png" class="mr-2" alt="file icon" width="25px">Expense reports</td>
+                                                <td>Yesterday at 3:30PM</td>
+                                                <td>Text document</td>
+                                                <td>23 MB</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/file_icon.png" class="mr-2" alt="file icon" width="25px">Checklist</td>
+                                                <td>Today at 8:45AM</td>
+                                                <td>MP3 audio</td>
+                                                <td>3.21 MB</td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="images/file_icon.png" class="mr-2" alt="file icon" width="25px">Party poster</td>
+                                                <td>July 25, 2019</td>
+                                                <td>PDF</td>
+                                                <td>491 MB</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    //Custom upload button
+                    const realFileBtn = document.getElementById("real-file");
+                    const customBtn = document.getElementById("custom-button");
+                    const customText = document.getElementById("custom-text");
+                    customBtn.addEventListener('click', function(){
+                        realFileBtn.click();
+                    });
+                    realFileBtn.addEventListener('change', function(){
+                        if(realFileBtn.value){
+
+                            if(realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].length > 15){
+                                customText.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].substring(0, 15) + '...';
+                            }else{
+                                customText.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                            }
+                        }else{
+                            customText.innerHTML = "No file choosen, yet.";
+                        }
+                    })  
+                    
+                    
+                </script>
+                <!-- /Upload section - list of files -->
+
+
+
+
+                <!-- token list -->
+                <div class="token_list_form mt-4">
                     <div class="col-md-6 offset-md-3">
                         <div class="card-body token_list_header">
                             <h3 class="mb-1">TOKENS</h3>
@@ -121,16 +226,16 @@
                         <div class="card-body token_list_container">
                             <h6>Backup tokens can be used when your primary and backup phone numbers aren't available. <br> Tokens can be used for login verification. <br> If you've used up all backup tokens, you can generate a new set of backup tokens. <br> Only tokens shown below are valid. </h6>
                             <ul class="token_list mt-4 text-center">
-                              <li>rto46hkl</li>
-                              <li>57guo4t3</li>
-                              <li>rt5w4p2x</li>
-                              <li>35w5enn5</li>
-                              <li>lo240c0z</li>
-                              <li>zwqla5j7</li>
-                              <li>982ftkl2</li>
-                              <li>98g57v54</li>
-                              <li>mwwxq5io</li>
-                              <li>98rtokla</li>
+                                <li>rto46hkl</li>
+                                <li>57guo4t3</li>
+                                <li>rt5w4p2x</li>
+                                <li>35w5enn5</li>
+                                <li>lo240c0z</li>
+                                <li>zwqla5j7</li>
+                                <li>982ftkl2</li>
+                                <li>98g57v54</li>
+                                <li>mwwxq5io</li>
+                                <li>98rtokla</li>
                             </ul>
                             <p>Print these tokens and keep them safe.</p>
                             <div class="token_list_btn_container form-group button_group mt-4">
@@ -140,9 +245,9 @@
                         </div>
                     </div>
                 </div>
-               <!-- /token list -->
-               
-               <!-- backup token -->
+                <!-- /token list -->
+
+                <!-- backup token -->
                 <div class="backup_token_form mt-4">
                     <div class="col-md-6 offset-md-3">
                         <div class="card-body backup_token_header">
@@ -172,7 +277,7 @@
                     </div>
                 </div>
                 <!-- /backup token -->
-               
+
                 <!-- bakup phone -->
                 <div class="backup_phone_form mt-4">
                     <div class="col-md-6 offset-md-3">
@@ -441,7 +546,8 @@
     <script src="script/jQuery.circleProgressBar.min.js"></script>
     <script src="script/raphael-min.js"></script>
     <script src="script/jQueryScript.js"></script>
-
+    <script src="script/sorttable.js"></script>
+    
     <script type="text/javascript">
         //Fetch copyright paragraph
         let year = document.getElementById('copyright');

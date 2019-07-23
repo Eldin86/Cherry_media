@@ -948,17 +948,71 @@ footer .useful-links li{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ====- UPLOAD SECTION - LIST OF FILES CSS */
+.upload_files_section_container .widget .panel-heading{
+    background-color: #8d0a15;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px
+}
+.upload_files_section_container .widget .panel-heading .heading_info h3{
+    color: #ffffff;
+}
+.upload_files_section_container .widget .panel-heading .heading_info span{
+    color: #8a8a8a;
+}
+.upload_files_section_container .widget .panel .table tbody tr td{
+    border-top: none;
+}
+.upload_files_section_container .widget .panel .table tbody tr:hover{
+    background-color: rgba(138,138,138, 0.2);
+}
+.upload_files_section_container .widget .panel .table thead tr th{
+    border-top: none;
+}
+.upload_files_section_container .widget .panel .table thead tr th:hover{
+    cursor: pointer;
+    background-color: rgba(138,138,138, 0.2);
+}
+.upload_files_section_container .widget .upload_files #real-file{
+    display: none
+}
+.upload_files_section_container .widget .upload_files #custom-button{
+    padding: 10px;
+    color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.upload_files_section_container .widget .upload_files #custom-button:focus{
+    outline: none;
+}
+.upload_files_section_container .widget .upload_files #custom-button img{
+    width: 35px;
+}
+.upload_files_section_container .widget .upload_files #custom-text{
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+    width: 170px;
+    display: inline-block;
+    border-bottom: 1px solid #8a8a8a;
+}
+.upload_files_section_container .widget .upload_files .upload_files_btn{
+    padding: 3px 18px;
+    background-color: transparent;
+    color: #ffffff;
+    border: none;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+.upload_files_section_container .widget .upload_files .upload_files_btn:focus{
+    outline: none;
+}
+@media screen and (max-width: 450px){
+    .upload_files_section_container .widget .table{
+        font-size: 13px
+    }
+}
 
