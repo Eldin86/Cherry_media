@@ -113,6 +113,86 @@
 
 
                 
+                <!-- upload e-book -->
+                <div class="upload_e-book">
+                    <div class="row">
+                        <div class="col-12 col-md-8 offset-md-2">
+                            <div class="card-body upload_e-book_header">
+                                <h3 class="mb-0">E-BOOK</h3>
+                            </div>  
+                            <div class="card-body">
+                                <h6 class="text-center">Please select files to upload e-book</h6>
+                                <form>
+                                   <div class="form-group mt-3">
+                                        <div class="col-sm-6 offset-sm-3">
+                                            <input type="text" class="form-control e-book_title" placeholder="Enter Book Title">
+                                        </div>
+                                      </div>
+                                      <div class="e-book_btn_container">
+                                         <div class="row">
+                                        <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
+                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                            <span class="custom_text">Choose Source File</span>
+                                            <input type="file" class="real_file" id="real-file">
+                                        </div>
+                                        <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
+                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                            <span class="custom_text">Choose MOBI File</span>
+                                            <input type="file" class="real_file" id="real-file">
+                                        </div>
+                                        <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
+                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                            <span class="custom_text">Choose EPUB File</span>
+                                            <input type="file" class="real_file" id="real-file">
+                                        </div>
+                                        <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
+                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                            <span class="custom_text">Choose Cover File</span>
+                                            <input type="file" class="real_file" id="real-file">
+                                        </div>
+                                         </div>
+                                        <div class="row">
+                                            <div  class="col-12 col-md-4 offset-md-2 mt-3">
+                                                <button class="upload_e-book btn" type="submit"><i class="fas fa-upload"></i>Upload Book</button>
+                                            </div>
+                                        </div>
+                                      </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const realFileBtn = document.getElementsByClassName("real_file");
+const customBtn = document.getElementsByClassName("custom_button");
+const customText = document.getElementsByClassName("custom_text");
+
+for(let i = 0; i < customBtn.length; i++){
+    customBtn[i].addEventListener('click', function() {
+    realFileBtn[i].click();
+});
+}
+
+
+
+for(let i = 0; i < realFileBtn.length; i++){
+    realFileBtn[i].addEventListener('change', function() {
+
+    if (realFileBtn[i].value) {
+        if (realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].length > 15) {
+            customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].substring(0, 15) + '...';
+        } else {
+            customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        }
+    } else {
+        customText[i].innerHTML = "No file choosen, yet.";
+    }
+})
+}
+                </script>
+                <!-- /upload e-book -->
+                
+                
                 
                 
                 <!-- upload book -->
@@ -128,7 +208,7 @@
                                     <div class="row d-flex justify-content-center text-center">
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>5 x 8</p>
                                                 </a>
@@ -136,7 +216,7 @@
                                         </div>
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>11 x 18 <br> FNSKU</p>
                                                 </a>
@@ -144,15 +224,15 @@
                                         </div>
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>12 x 19 <br>Hardcover</p>
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-3">
-                                            <div class="format_wrapper">                                                 
-                                                <a href="#">
+                                            <div class="format_wrapper">         
+                                                <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>12 x 19 <br>ISBN</p>
                                                 </a>
@@ -162,7 +242,7 @@
                                     <div class="row d-flex justify-content-center text-center">
                                                                                 <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>A5 <br>Hardcover</p>
                                                 </a>
@@ -170,13 +250,13 @@
                                         </div>
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                 <img src="images/blank_book.svg" alt=""><p>11,5 x  18 <br> ISBN</p></a>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
-                                                <a href="#">
+                                                <a href="#!">
                                                 <img src="images/blank_book.svg" alt=""><p>12,5 x 19 <br>FNSK</p></a>
                                             </div>
                                         </div>
