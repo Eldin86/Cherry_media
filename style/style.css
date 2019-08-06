@@ -1220,6 +1220,9 @@ footer .useful-links li{
     color: #ffffff;
     padding: 50px 0 
 }
+.single_book_detail .single_book_detail_header p{
+    color: #ffffff;
+}
 .single_book_detail .book_info p .book_file{
     width: 40px;
 }
@@ -1253,6 +1256,9 @@ footer .useful-links li{
     .single_book_detail .single_book_detail_header h3{
         padding: 8px 0 8px 0;
         font-size: 1rem;
+    }
+    .single_book_detail .single_book_detail_header p{
+        font-size: .8rem;
     }
     .single_book_detail .book_info p .book_file{
         width: 25px;
