@@ -112,6 +112,61 @@
             <div class="container-fluid">
 
 
+              <!-- import CSV  -->
+                <div class="import_csv mt-4">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                        <div class="card-body import_csv_header">
+                            <h3 class="mb-1">IMPORT CSV</h3>
+                        </div>
+                        <div class="card-body import_csv_container">
+                            <h6>Batch-import tasks by uploading a specifically-formated CSV.</h6>
+                            <h6>Updated CSV files will update the task list as well. Success and failure will be reported here</h6>
+                            <div class="row">
+                                <div class="col-12 col-sm-5 offset-sm-1 col-md-5 offset-md-1 mt-3 mr-4 import_csv_wrapper">
+                                    <button class="btn import_csv_btn" type="button" id="custom_csv_button"><img src="images/folder_file.png" alt=""></button>
+                                    <span class="custom_csv_text" id="custom_csv_text">Choose Source File</span>
+                                    <input type="file" class="real_csv_file" id="import_csv_real_file">
+                                </div>
+                                <div  class="col-12 col-sm-4 offset-sm-1 col-md-4 offset-md-1 mt-3">
+                                    <button class="upload_csv_btn btn" type="submit"><i class="fas fa-upload"></i>Upload</button>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="text-center mt-4 mb-3">Download the template to crete CSV easier.</h6>
+                            </div>
+                            <div class="row">
+                                <div  class="col-12 col-md-6 offset-md-3 text-center">
+                                    <button class="download_cvs_template_btn btn" type="submit"><i class="fas fa-download"></i>Download template</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <script>
+                    const realCSVFileBtn = document.getElementById("import_csv_real_file");
+                    const customCSVBtn = document.getElementById("custom_csv_button");
+                    const customCSVText = document.getElementById("custom_csv_text");
+                    customCSVBtn.addEventListener('click', function(){
+                        realCSVFileBtn.click();
+                    });
+                    realCSVFileBtn.addEventListener('change', function(){
+                        if(realCSVFileBtn.value){
+
+                            if(realCSVFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].length > 15){
+                                customCSVText.innerHTML = realCSVFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].substring(0, 15) + '...';
+                            }else{
+                                customCSVText.innerHTML = realCSVFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                            }
+                        }else{
+                            customCSVText.innerHTML = "No file choosen, yet.";
+                        }
+                    })  
+                </script>
+              <!-- /import CSV -->
+              
+              
                <!-- single book detail -->
                 <div class="single_book_detail">
                     <div class="row">
@@ -195,8 +250,7 @@
                 </div>
                <!-- /single book detail -->
                
-               
-                
+
                 <!-- upload e-book -->
                 <div class="upload_e-book">
                     <div class="row">
@@ -248,31 +302,29 @@
                 </div>
                 <script>
                     const realFileBtn = document.getElementsByClassName("real_file");
-const customBtn = document.getElementsByClassName("custom_button");
-const customText = document.getElementsByClassName("custom_text");
+                    const customBtn = document.getElementsByClassName("custom_button");
+                    const customText = document.getElementsByClassName("custom_text");
 
-for(let i = 0; i < customBtn.length; i++){
-    customBtn[i].addEventListener('click', function() {
-    realFileBtn[i].click();
-});
-}
+                    for(let i = 0; i < customBtn.length; i++){
+                            customBtn[i].addEventListener('click', function() {
+                                realFileBtn[i].click();
+                            });
+                    }
 
+                    for(let i = 0; i < realFileBtn.length; i++){
+                        realFileBtn[i].addEventListener('change', function() {
 
-
-for(let i = 0; i < realFileBtn.length; i++){
-    realFileBtn[i].addEventListener('change', function() {
-
-    if (realFileBtn[i].value) {
-        if (realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].length > 15) {
-            customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].substring(0, 15) + '...';
-        } else {
-            customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
-        }
-    } else {
-        customText[i].innerHTML = "No file choosen, yet.";
-    }
-})
-}
+                        if (realFileBtn[i].value) {
+                            if (realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].length > 15) {
+                                customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1].substring(0, 15) + '...';
+                            } else {
+                                customText[i].innerHTML = realFileBtn[i].value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+                            }
+                        } else {
+                            customText[i].innerHTML = "No file choosen, yet.";
+                        }
+                    })
+                    }
                 </script>
                 <!-- /upload e-book -->
                 
