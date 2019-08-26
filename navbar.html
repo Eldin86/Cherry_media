@@ -112,36 +112,89 @@
             <div class="container-fluid">
 
 
-              <!-- import CSV  -->
-                <div class="import_csv mt-4">
+
+                <!-- search results  -->
+                <div class="search_results mt-4">
                     <div class="row">
-                        <div class="col-md-6 offset-md-3">
-                        <div class="card-body import_csv_header">
-                            <h3 class="mb-1">IMPORT CSV</h3>
-                        </div>
-                        <div class="card-body import_csv_container">
-                            <h6>Batch-import tasks by uploading a specifically-formated CSV.</h6>
-                            <h6>Updated CSV files will update the task list as well. Success and failure will be reported here</h6>
-                            <div class="row">
-                                <div class="col-12 col-sm-5 offset-sm-1 col-md-5 offset-md-1 mt-3 mr-4 import_csv_wrapper">
-                                    <button class="btn import_csv_btn" type="button" id="custom_csv_button"><img src="images/folder_file.png" alt=""></button>
-                                    <span class="custom_csv_text" id="custom_csv_text">Choose Source File</span>
-                                    <input type="file" class="real_csv_file" id="import_csv_real_file">
-                                </div>
-                                <div  class="col-12 col-sm-4 offset-sm-1 col-md-4 offset-md-1 mt-3">
-                                    <button class="upload_csv_btn btn" type="submit"><i class="fas fa-upload"></i>Upload</button>
-                                </div>
+                        <div class="col-xs-12 col-md-6 offset-md-3">
+                            <div class="card-body search_results_header">
+                                <h3 class="mb-1">SEARCH RESULTS</h3>
                             </div>
-                            <div>
-                                <h6 class="text-center mt-4 mb-3">Download the template to crete CSV easier.</h6>
-                            </div>
-                            <div class="row">
-                                <div  class="col-12 col-md-6 offset-md-3 text-center">
-                                    <button class="download_cvs_template_btn btn" type="submit"><i class="fas fa-download"></i>Download template</button>
-                                </div>
+                            <div class="card-body search_results_container">
+                                <h6>3 search results for term: 'Lorem ipsum'</h6>
+                                   <ul class="list-group">
+                                      <li class="list-group-item search_list_item">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-12 col-md-6 col-lg-3"><h5>Lorem Ipsum</h5></div>
+                                            <div class="col-12 col-md-6 col-lg-9">
+                                                <p>In list: <a href="#!" class="list_name">Some List</a></p>
+                                                <p>Assigned to: <a href="#!" class="user">Sale</a></p>
+                                                <p>Completed: <b class="not_completed">No</b></p>
+                                            </div>
+                                        </div>
+                                      </li>
+                                      <li class="list-group-item search_list_item">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-12 col-lg-3"><h5>Lorem Ipsum</h5></div>
+                                            <div class="col-12 col-lg-9">
+                                                <p>In list: <a href="#!" class="list_name">Some List</a></p>
+                                                <p>Assigned to: <a href="#!" class="user">Sale</a></p>
+                                                <p>Completed: <b class="completed">Yes</b></p>
+                                            </div>
+                                        </div>
+                                      </li>
+                                      <li class="list-group-item search_list_item">
+                                        <div class="row justify-content-between align-items-center">
+                                            <div class="col-12 col-lg-3"><h5>Lorem Ipsum</h5></div>
+                                            <div class="col-12 col-lg-9">
+                                                <p>In list: <a href="#!" class="list_name">Some List</a></p>
+                                                <p>Assigned to: <a href="#!" class="user">Sale</a></p>
+                                                <p>Completed: <b class="completed">No</b></p>
+                                            </div>
+                                        </div>
+                                      </li>
+                                </ul> 
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- /search results  -->
+
+
+
+
+
+
+                <!-- import CSV  -->
+                <div class="import_csv mt-4">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <div class="card-body import_csv_header">
+                                <h3 class="mb-1">IMPORT CSV</h3>
+                            </div>
+                            <div class="card-body import_csv_container">
+                                <h6>Batch-import tasks by uploading a specifically-formated CSV.</h6>
+                                <h6>Updated CSV files will update the task list as well. Success and failure will be reported here</h6>
+                                <div class="row">
+                                    <div class="col-12 col-sm-5 offset-sm-1 col-md-5 offset-md-1 mt-3 mr-4 import_csv_wrapper">
+                                        <button class="btn import_csv_btn" type="button" id="custom_csv_button"><img src="images/folder_file.png" alt=""></button>
+                                        <span class="custom_csv_text" id="custom_csv_text">Choose Source File</span>
+                                        <input type="file" class="real_csv_file" id="import_csv_real_file">
+                                    </div>
+                                    <div class="col-12 col-sm-4 offset-sm-1 col-md-4 offset-md-1 mt-3">
+                                        <button class="upload_csv_btn btn" type="submit"><i class="fas fa-upload"></i>Upload</button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h6 class="text-center mt-4 mb-3">Download the template to crete CSV easier.</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 offset-md-3 text-center">
+                                        <button class="download_cvs_template_btn btn" type="submit"><i class="fas fa-download"></i>Download template</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <script>
@@ -164,80 +217,80 @@
                         }
                     })  
                 </script>
-              <!-- /import CSV -->
-              
-              
-               <!-- single book detail -->
+                <!-- /import CSV -->
+
+
+                <!-- single book detail -->
                 <div class="single_book_detail">
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2">
                             <div class="card-body single_book_detail_header">
                                 <h3 class="mb-0">LOREM IPSUM</h3>
                                 <p>Uploaded: <small>10/05/2019, 20:45</small></p>
-                            </div>  
+                            </div>
                             <div class="card-body book_info">
 
                                 <div class="row">
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Pdf.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>0.80MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Pdf.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>0.80MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Indesign.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>1.1MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Indesign.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>1.1MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Photoshop.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>5MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Photoshop.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>5MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Indesign.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>0.4MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Indesign.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>0.4MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Photoshop.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>6.5MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Photoshop.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>6.5MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-md-4 text-center mt-4 book_container">
-                                    <div>
-                                        <p><img class="book_file" src="images/Pdf.svg" alt=""></p>
-                                    <h4 class="book_title">Cover</h4>
-                                    <p class="book_size">Size: <small>3MB</small></p>
-                                    <p>
-                                        <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
-                                    </p>
+                                    <div class="col-6 col-md-4 text-center mt-4 book_container">
+                                        <div>
+                                            <p><img class="book_file" src="images/Pdf.svg" alt=""></p>
+                                            <h4 class="book_title">Cover</h4>
+                                            <p class="book_size">Size: <small>3MB</small></p>
+                                            <p>
+                                                <button class="download_single_btn btn" type="submit"><i class="fas fa-download"></i>Download</button>
+                                            </p>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-6 col-md-4 text-center mt-4 book_container">
@@ -248,8 +301,8 @@
                         </div>
                     </div>
                 </div>
-               <!-- /single book detail -->
-               
+                <!-- /single book detail -->
+
 
                 <!-- upload e-book -->
                 <div class="upload_e-book">
@@ -257,44 +310,44 @@
                         <div class="col-12 col-md-8 offset-md-2">
                             <div class="card-body upload_e-book_header">
                                 <h3 class="mb-0">E-BOOK</h3>
-                            </div>  
+                            </div>
                             <div class="card-body">
                                 <h6 class="text-center">Please select files to upload e-book</h6>
                                 <form>
-                                   <div class="form-group mt-3">
+                                    <div class="form-group mt-3">
                                         <div class="col-sm-6 offset-sm-3">
                                             <input type="text" class="form-control e-book_title" placeholder="Enter Book Title">
                                         </div>
-                                      </div>
-                                      <div class="e-book_btn_container">
-                                         <div class="row">
-                                        <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
-                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
-                                            <span class="custom_text">Choose Source File</span>
-                                            <input type="file" class="real_file" id="real-file">
-                                        </div>
-                                        <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
-                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
-                                            <span class="custom_text">Choose MOBI File</span>
-                                            <input type="file" class="real_file" id="real-file">
-                                        </div>
-                                        <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
-                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
-                                            <span class="custom_text">Choose EPUB File</span>
-                                            <input type="file" class="real_file" id="real-file">
-                                        </div>
-                                        <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
-                                            <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
-                                            <span class="custom_text">Choose Cover File</span>
-                                            <input type="file" class="real_file" id="real-file">
-                                        </div>
-                                         </div>
+                                    </div>
+                                    <div class="e-book_btn_container">
                                         <div class="row">
-                                            <div  class="col-12 col-md-4 offset-md-2 mt-3">
+                                            <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
+                                                <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                                <span class="custom_text">Choose Source File</span>
+                                                <input type="file" class="real_file" id="real-file">
+                                            </div>
+                                            <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
+                                                <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                                <span class="custom_text">Choose MOBI File</span>
+                                                <input type="file" class="real_file" id="real-file">
+                                            </div>
+                                            <div class="col-12 col-md-4 offset-md-2 mt-3 mr-4 e-book_btn_wrapper">
+                                                <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                                <span class="custom_text">Choose EPUB File</span>
+                                                <input type="file" class="real_file" id="real-file">
+                                            </div>
+                                            <div class="col-12 col-md-4 mt-3 e-book_btn_wrapper">
+                                                <button class="btn e-book_btn custom_button" type="button" id="custom-button"><img src="images/folder_file.png" alt=""></button>
+                                                <span class="custom_text">Choose Cover File</span>
+                                                <input type="file" class="real_file" id="real-file">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-md-4 offset-md-2 mt-3">
                                                 <button class="upload_e-book btn" type="submit"><i class="fas fa-upload"></i>Upload Book</button>
                                             </div>
                                         </div>
-                                      </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
@@ -327,14 +380,14 @@
                     }
                 </script>
                 <!-- /upload e-book -->
-                
+
                 <!-- upload book -->
                 <div class="upload_book">
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2">
                             <div class="card-body upload_book_header">
                                 <h3 class="mb-0">BOOK</h3>
-                            </div>  
+                            </div>
                             <div class="card-body">
                                 <h6 class="text-center">Please choose format of book to upload</h6>
                                 <div class="version_book_container">
@@ -364,7 +417,7 @@
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-3">
-                                            <div class="format_wrapper">         
+                                            <div class="format_wrapper">
                                                 <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
                                                     <p>12 x 19 <br>ISBN</p>
@@ -373,7 +426,7 @@
                                         </div>
                                     </div>
                                     <div class="row d-flex justify-content-center text-center">
-                                                                                <div class="col-6 col-md-3">
+                                        <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
                                                 <a href="#!">
                                                     <img src="images/blank_book.svg" alt="">
@@ -384,13 +437,17 @@
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
                                                 <a href="#!">
-                                                <img src="images/blank_book.svg" alt=""><p>11,5 x  18 <br> ISBN</p></a>
+                                                    <img src="images/blank_book.svg" alt="">
+                                                    <p>11,5 x 18 <br> ISBN</p>
+                                                </a>
                                             </div>
                                         </div>
                                         <div class="col-6 col-md-3">
                                             <div class="format_wrapper">
                                                 <a href="#!">
-                                                <img src="images/blank_book.svg" alt=""><p>12,5 x 19 <br>FNSK</p></a>
+                                                    <img src="images/blank_book.svg" alt="">
+                                                    <p>12,5 x 19 <br>FNSK</p>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -400,24 +457,24 @@
                     </div>
                 </div>
                 <!-- /upload book -->
-                
-                
-                 <!-- upload books front  -->
+
+
+                <!-- upload books front  -->
                 <div class="upload_books_front mt-4">
                     <div class="row">
                         <div class="col-12 col-md-8 offset-md-2">
-                        <div class="card-body upload_books_front_header">
-                            <h3 class="mb-0">BOOK UPLOAD</h3>
-                        </div>
-                        <div class="card-body">
-                           <h6 class="text-center">Please choose version of book to upload</h6>
-                            <div class="upload_books_btn_container text-center mt-4">
-                                <button class="btn"><i class="fas fa-book fa-lg"></i><b>BOOK</b></button>
-                                <button class="btn"><i class="fas fa-book fa-lg"></i><b>E-BOOK</b></button>
+                            <div class="card-body upload_books_front_header">
+                                <h3 class="mb-0">BOOK UPLOAD</h3>
                             </div>
-                             <!-- Table -->
-                            <div class="table_container table-responsive mt-4">
-                                 <table id="file_list_table" class="table sortable">
+                            <div class="card-body">
+                                <h6 class="text-center">Please choose version of book to upload</h6>
+                                <div class="upload_books_btn_container text-center mt-4">
+                                    <button class="btn"><i class="fas fa-book fa-lg"></i><b>BOOK</b></button>
+                                    <button class="btn"><i class="fas fa-book fa-lg"></i><b>E-BOOK</b></button>
+                                </div>
+                                <!-- Table -->
+                                <div class="table_container table-responsive mt-4">
+                                    <table id="file_list_table" class="table sortable">
                                         <thead>
                                             <tr>
                                                 <th class="pr-0">Title</th>
@@ -458,53 +515,53 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                             </div>
-                            
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /upload books front-->
-                
+
                 <!-- contact us form  -->
                 <div class="contact_us_form mt-4">
                     <div class="row">
-                                            <div class="col-md-6 offset-md-3">
-                        <div class="card-body contact_us_header">
-                            <h3 class="mb-0">GET IN TOUCH</h3>
+                        <div class="col-md-6 offset-md-3">
+                            <div class="card-body contact_us_header">
+                                <h3 class="mb-0">GET IN TOUCH</h3>
+                            </div>
+                            <div class="card-body">
+                                <h6 class="text-center">Our team is happy to answer your questions. <br> Fill out the form and we'll be in touch as soon as possible</h6>
+                                <form class="contact_us_form_container mt-4" role="form" autocomplete="off">
+
+                                    <div class="contact_us_input_container">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control rounded_top_corner" placeholder="Your Name" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="contact_us_input_container">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Your Email" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="contact_us_input_container">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Subject" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="contact_us_input_container">
+                                        <div class="input-group mb-3">
+                                            <textarea class="form-control" placeholder="Your Message..." rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group contact_us_btn_container">
+                                        <button type="submit" class="contact_us_btn">Send</button>
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body">
-                           <h6 class="text-center">Our team is happy to answer your questions. <br> Fill out the form and we'll be in touch as soon as possible</h6>
-                            <form class="contact_us_form_container mt-4" role="form" autocomplete="off">
-
-                                <div class="contact_us_input_container">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control rounded_top_corner" placeholder="Your Name" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="contact_us_input_container">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Your Email" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="contact_us_input_container">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder="Subject" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="contact_us_input_container">
-                                    <div class="input-group mb-3">
-                                        <textarea class="form-control" placeholder="Your Message..." rows="3"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group contact_us_btn_container">
-                                    <button type="submit" class="contact_us_btn">Send</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /contact us form -->
@@ -514,30 +571,30 @@
                 <div class="token_list_form mt-4">
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                        <div class="card-body token_list_header">
-                            <h3 class="mb-1">TOKENS</h3>
-                        </div>
-                        <div class="card-body token_list_container">
-                            <h6>Backup tokens can be used when your primary and backup phone numbers aren't available. <br> Tokens can be used for login verification. <br> If you've used up all backup tokens, you can generate a new set of backup tokens. <br> Only tokens shown below are valid. </h6>
-                            <ul class="token_list mt-4 text-center">
-                                <li>rto46hkl</li>
-                                <li>57guo4t3</li>
-                                <li>rt5w4p2x</li>
-                                <li>35w5enn5</li>
-                                <li>lo240c0z</li>
-                                <li>zwqla5j7</li>
-                                <li>982ftkl2</li>
-                                <li>98g57v54</li>
-                                <li>mwwxq5io</li>
-                                <li>98rtokla</li>
-                            </ul>
-                            <p>Print these tokens and keep them safe.</p>
-                            <div class="token_list_btn_container form-group button_group mt-4">
-                                <button type="submit" class="token_list_generate mr-3 mb-3">Generate Tokens</button> <br>
-                                <a href="#!" class="mr-3 mt-3">Back to Account Security</a>
+                            <div class="card-body token_list_header">
+                                <h3 class="mb-1">TOKENS</h3>
+                            </div>
+                            <div class="card-body token_list_container">
+                                <h6>Backup tokens can be used when your primary and backup phone numbers aren't available. <br> Tokens can be used for login verification. <br> If you've used up all backup tokens, you can generate a new set of backup tokens. <br> Only tokens shown below are valid. </h6>
+                                <ul class="token_list mt-4 text-center">
+                                    <li>rto46hkl</li>
+                                    <li>57guo4t3</li>
+                                    <li>rt5w4p2x</li>
+                                    <li>35w5enn5</li>
+                                    <li>lo240c0z</li>
+                                    <li>zwqla5j7</li>
+                                    <li>982ftkl2</li>
+                                    <li>98g57v54</li>
+                                    <li>mwwxq5io</li>
+                                    <li>98rtokla</li>
+                                </ul>
+                                <p>Print these tokens and keep them safe.</p>
+                                <div class="token_list_btn_container form-group button_group mt-4">
+                                    <button type="submit" class="token_list_generate mr-3 mb-3">Generate Tokens</button> <br>
+                                    <a href="#!" class="mr-3 mt-3">Back to Account Security</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /token list -->
@@ -546,77 +603,77 @@
                 <div class="backup_token_form mt-4">
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                        <div class="card-body backup_token_header">
-                            <h3 class="mb-1">TOKEN BACKUP</h3>
-                        </div>
-                        <div class="card-body backup_token_container">
-                            <h6>We sent a token to your phone number.</h6>
-                            <form class="token_backup_form" role="form" autocomplete="off">
-                                <div class="form-group">
-                                    <div class="backup_token_group">
-                                        <div class="input-group mb-3 backup_token_input_container">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <img src="images/profile_token_icon.svg">
-                                                </span>
+                            <div class="card-body backup_token_header">
+                                <h3 class="mb-1">TOKEN BACKUP</h3>
+                            </div>
+                            <div class="card-body backup_token_container">
+                                <h6>We sent a token to your phone number.</h6>
+                                <form class="token_backup_form" role="form" autocomplete="off">
+                                    <div class="form-group">
+                                        <div class="backup_token_group">
+                                            <div class="input-group mb-3 backup_token_input_container">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <img src="images/profile_token_icon.svg">
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Enter token">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Enter token">
-                                        </div>
-                                        <div class="form-inline backup_token_btn_container form-group button_group mt-4">
-                                            <button type="submit" class="mr-3 token_back">Back</button>
-                                            <button type="submit" class="token_next">Next</button>
+                                            <div class="form-inline backup_token_btn_container form-group button_group mt-4">
+                                                <button type="submit" class="mr-3 token_back">Back</button>
+                                                <button type="submit" class="token_next">Next</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /backup token -->
 
                 <!-- bakup phone -->
                 <div class="backup_phone_form mt-4">
-                <div class="row">
-                                        <div class="col-md-6 offset-md-3">
-                        <div class="card-body backup_phone_header">
-                            <h3 class="mb-1">PHONE BACKUP</h3>
-                        </div>
-                        <div class="card-body backup_phone_container">
-                            <h6>Backup phone number will be used if your primary method of registration is not available.</h6>
-                            <form class="backup_form" role="form" autocomplete="off">
-                                <div class="form-group">
-                                    <div class="backup_phone_group">
-                                        <div class="input-group mb-3 backup_input_container">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text">
-                                                    <img src="images/profile_phone_icon.svg">
-                                                </span>
+                    <div class="row">
+                        <div class="col-md-6 offset-md-3">
+                            <div class="card-body backup_phone_header">
+                                <h3 class="mb-1">PHONE BACKUP</h3>
+                            </div>
+                            <div class="card-body backup_phone_container">
+                                <h6>Backup phone number will be used if your primary method of registration is not available.</h6>
+                                <form class="backup_form" role="form" autocomplete="off">
+                                    <div class="form-group">
+                                        <div class="backup_phone_group">
+                                            <div class="input-group mb-3 backup_input_container">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <img src="images/profile_phone_icon.svg">
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Phone number" aria-label="Username" aria-describedby="basic-addon1">
                                             </div>
-                                            <input type="text" class="form-control" placeholder="Phone number" aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="backup_options" value="phone" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                                Phone Call
-                                            </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="backup_options" value="text">
-                                            <label class="form-check-label" for="exampleRadios2">
-                                                Text Message
-                                            </label>
-                                        </div>
-                                        <div class="form-inline backup_phone_btn_container form-group button_group mt-4">
-                                            <button type="submit" class="mr-3 phone_back">Back</button>
-                                            <button type="submit" class="phone_next">Next</button>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="backup_options" value="phone" checked>
+                                                <label class="form-check-label" for="exampleRadios1">
+                                                    Phone Call
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="backup_options" value="text">
+                                                <label class="form-check-label" for="exampleRadios2">
+                                                    Text Message
+                                                </label>
+                                            </div>
+                                            <div class="form-inline backup_phone_btn_container form-group button_group mt-4">
+                                                <button type="submit" class="mr-3 phone_back">Back</button>
+                                                <button type="submit" class="phone_next">Next</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
                 </div>
                 <!-- /backup phone -->
 
@@ -624,23 +681,23 @@
                 <div class="disable_2fa_form mt-4">
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                        <div class="card-body disable_2fa_header">
-                            <h3 class="mb-0">DISABLE 2FA</h3>
-                        </div>
-                        <div class="card-body">
-                            <h6>You are about to disable 2FA authentication. <br> This Weaknes your account security </h6>
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                    <label class="form-check-label" for="defaultCheck1">
-                                        <b>Yes, I am sure</b>
-                                    </label>
-                                </div><br>
-                                <button type="submit" class="disable_2fa_btn">Disable</button>
+                            <div class="card-body disable_2fa_header">
+                                <h3 class="mb-0">DISABLE 2FA</h3>
                             </div>
+                            <div class="card-body">
+                                <h6>You are about to disable 2FA authentication. <br> This Weaknes your account security </h6>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="form-check-label" for="defaultCheck1">
+                                            <b>Yes, I am sure</b>
+                                        </label>
+                                    </div><br>
+                                    <button type="submit" class="disable_2fa_btn">Disable</button>
+                                </div>
 
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /disable 2FA -->
@@ -649,29 +706,29 @@
                 <div class="two_fa_settings_form mt-4">
                     <div class="row">
                         <div class="col-md-6 offset-md-3">
-                        <div class="card-body two_fa_settings_header">
-                            <h3 class="mb-0">ACCOUNT SECURITY</h3>
+                            <div class="card-body two_fa_settings_header">
+                                <h3 class="mb-0">ACCOUNT SECURITY</h3>
+                            </div>
+                            <div class="card-body">
+                                <h6>Primary method: Send text message to <br> +38* ** *** *11</h6>
+                                <div class="form-group two_fa_settings_btn_container">
+                                    <h4>Backup Phone Numbers</h4>
+                                    <p>If your primary method is not available, we are able to send backup tokens to the phone numbers listed below</p>
+                                    <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
+                                </div>
+                                <div class="form-group two_fa_settings_btn_container">
+                                    <h4>Backup tokens</h4>
+                                    <p>If you don't have any device with you, you can access your account using backup tokens. You have 10 backup tokens remaining.</p>
+                                    <button type="submit" class="two_fa_settings_btn">Show Codes</button>
+                                </div>
+                                <div class="form-group two_fa_settings_btn_container">
+                                    <h4>Disable Two-Factor Authentication</h4>
+                                    <p>We strongly discourage you to do so, you can disable two-factor authentication for your account</p>
+                                    <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
+                                </div>
+                                <a class="two_fa_settings_disable" href="#!">Disable Two-Factor Authentiacion</a>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <h6>Primary method: Send text message to <br> +38* ** *** *11</h6>
-                            <div class="form-group two_fa_settings_btn_container">
-                                <h4>Backup Phone Numbers</h4>
-                                <p>If your primary method is not available, we are able to send backup tokens to the phone numbers listed below</p>
-                                <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
-                            </div>
-                            <div class="form-group two_fa_settings_btn_container">
-                                <h4>Backup tokens</h4>
-                                <p>If you don't have any device with you, you can access your account using backup tokens. You have 10 backup tokens remaining.</p>
-                                <button type="submit" class="two_fa_settings_btn">Show Codes</button>
-                            </div>
-                            <div class="form-group two_fa_settings_btn_container">
-                                <h4>Disable Two-Factor Authentication</h4>
-                                <p>We strongly discourage you to do so, you can disable two-factor authentication for your account</p>
-                                <button type="submit" class="two_fa_settings_btn">Add Phone Number</button>
-                            </div>
-                            <a class="two_fa_settings_disable" href="#!">Disable Two-Factor Authentiacion</a>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /form card 2FA settings -->
@@ -679,48 +736,48 @@
 
                 <!-- form card change email -->
                 <div class="change_email_form mt-4">
-                   <div class="row">
+                    <div class="row">
                         <div class="col-md-6 offset-md-3">
-                        <div class="card-body change_email_header">
-                            <h3 class="mb-0">CHANGE EMAIL</h3>
-                        </div>
-                        <div class="card-body">
-                            <form class="form" role="form" autocomplete="off">
-                                <h5 class="text-center mb-4">The following e-mail addresses are associated with your account:</h5>
-                                <div class="form-group text-center checkbox_option mb-4">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optradio">example@example.com
-                                    </label>
-                                    <label>Unverified Primary</label>
-                                </div>
-                                <div class="form-group button_group mb-4 text-center">
-                                    <button type="submit" class="make_primary">Make Primary</button>
-                                    <button type="submit" class="remove">Remove</button>
-                                    <button type="submit" class="re_send_ver">Re-send Verification</button>
-                                </div>
+                            <div class="card-body change_email_header">
+                                <h3 class="mb-0">CHANGE EMAIL</h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="form" role="form" autocomplete="off">
+                                    <h5 class="text-center mb-4">The following e-mail addresses are associated with your account:</h5>
+                                    <div class="form-group text-center checkbox_option mb-4">
+                                        <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">example@example.com
+                                        </label>
+                                        <label>Unverified Primary</label>
+                                    </div>
+                                    <div class="form-group button_group mb-4 text-center">
+                                        <button type="submit" class="make_primary">Make Primary</button>
+                                        <button type="submit" class="remove">Remove</button>
+                                        <button type="submit" class="re_send_ver">Re-send Verification</button>
+                                    </div>
 
-                                <div class="form-group">
-                                    <h4 for="inputPasswordNewVerify">Add E-mail Address</h4>
-                                    <div class="email_input_group">
-                                        <div class="email_input_container">
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-addon1">
-                                                        <img src="images/envelope_profile_forms.svg" alt="">
-                                                    </span>
+                                    <div class="form-group">
+                                        <h4 for="inputPasswordNewVerify">Add E-mail Address</h4>
+                                        <div class="email_input_group">
+                                            <div class="email_input_container">
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1">
+                                                            <img src="images/envelope_profile_forms.svg" alt="">
+                                                        </span>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                            <div>
+                                                <button type="submit" class="add_email">Add E-mail</button>
                                             </div>
                                         </div>
-                                        <div>
-                                            <button type="submit" class="add_email">Add E-mail</button>
-                                        </div>
                                     </div>
-                                </div>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                   </div>
                 </div>
                 <!-- /form card change email -->
 
@@ -729,51 +786,51 @@
                 <!-- form card change password -->
                 <div class="change_pass_form mt-4">
                     <div class="row">
-                                            <div class="col-md-6 offset-md-3">
-                        <div class="card-body change_pass_header">
-                            <h3 class="mb-0">CHANGE PASSWORD</h3>
+                        <div class="col-md-6 offset-md-3">
+                            <div class="card-body change_pass_header">
+                                <h3 class="mb-0">CHANGE PASSWORD</h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="pass_form" role="form" autocomplete="off">
+
+                                    <div class="pass_input_container">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="images/change_password_lock.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Old Password" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="pass_input_container">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="images/change_password_lock.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="New Password" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+                                    <div class="pass_input_container">
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text" id="basic-addon1">
+                                                    <img src="images/change_password_lock.svg" alt="">
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Confirm New Password" aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group change_pass_btn_container">
+                                        <button type="submit" class="change_pass_btn">Change Password</button>
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
-                        <div class="card-body">
-                            <form class="pass_form" role="form" autocomplete="off">
-
-                                <div class="pass_input_container">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="images/change_password_lock.svg" alt="">
-                                            </span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Old Password" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="pass_input_container">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="images/change_password_lock.svg" alt="">
-                                            </span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="New Password" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-                                <div class="pass_input_container">
-                                    <div class="input-group mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text" id="basic-addon1">
-                                                <img src="images/change_password_lock.svg" alt="">
-                                            </span>
-                                        </div>
-                                        <input type="text" class="form-control" placeholder="Confirm New Password" aria-label="Username" aria-describedby="basic-addon1">
-                                    </div>
-                                </div>
-
-                                <div class="form-group change_pass_btn_container">
-                                    <button type="submit" class="change_pass_btn">Change Password</button>
-                                </div>
-
-                            </form>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <!-- /form card change password -->
@@ -854,7 +911,7 @@
     <script src="script/raphael-min.js"></script>
     <script src="script/jQueryScript.js"></script>
     <script src="script/sorttable.js"></script>
-    
+
     <script type="text/javascript">
         //Fetch copyright paragraph
         let year = document.getElementById('copyright');
