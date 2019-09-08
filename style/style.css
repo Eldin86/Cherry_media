@@ -1065,13 +1065,13 @@ footer .useful-links li{
    border-radius: 10px;
     background-color: rgba(141, 10, 21 ,1);
 }
-.upload_books_front thead, tbody tr {
+.upload_books_front thead, .upload_books_front tbody tr {
     display:table;
     width:100%;
     table-layout:fixed;
 }
 .upload_books_front thead {
-    width: calc( 100% - 1em )
+    width: calc( 100% - 1em );
 }
 .upload_books_front tbody tr td span{
     color: #8a8a8a;
@@ -1476,6 +1476,123 @@ footer .useful-links li{
         order: 2
     }
 }
+
+/* ====- DETAIL TASKS CSS -==== */
+.details_tasks .details_tasks_header{
+    background: url('../images/details_banner.png') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.details_tasks .details_tasks_header h3{
+    color: #ffffff;
+    padding: 50px 0
+}
+.details_tasks .details_tasks_container .details_tasks_table_container .table tbody tr td button{
+    background-color: #1c7f1c;
+    color: #ffffff;
+    border: none;
+}
+.details_tasks .details_tasks_container .details_tasks_table_container .table tbody tr:hover{
+    background-color: rgba(138, 138, 138, .1)
+}
+.details_tasks .details_tasks_container .details_tasks_table_container .table thead tr th:hover{
+    cursor: pointer;
+    background-color: rgba(138, 138, 138, .1)
+}
+@media screen and (max-width: 450px){
+    .details_tasks .details_tasks_header h3{
+        padding: 8px 0 8px 0;
+        font-size: .8rem;
+    }
+}
+
+
+/* ====- DETAIL TASKS v2 CSS -==== */
+.details_tasks2 .details_tasks2_header{
+    background: url('../images/details_banner.png') no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.details_tasks2 .details_tasks2_header h3{
+    color: #ffffff;
+    padding: 50px 0
+}
+.details_tasks2 .details_tasks2_container .details_tasks2_table_container .table tbody tr td button{
+    background-color: #1c7f1c;
+    color: #ffffff;
+    border: none;
+}
+@media screen and (max-width: 450px){
+    .details_tasks2 .details_tasks2_header h3{
+        padding: 8px 0 8px 0;
+        font-size: .8rem;
+    }
+}
+
+/* PAGINATION CSS */
+.pagination_container nav ul{
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+    border-radius: 0px;
+}
+.pagination_container nav ul .prev_arrow, .pagination_container nav ul .next_arrow{
+    padding: 4px;
+}
+.pagination_container nav li a{
+    border: 0px solid transparent;
+    color: #8a8a8a;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.pagination_container nav li a:hover:not(.arrow){
+    background-color: #8d0a15;
+    color: #ffffff;
+}
+
+.pagination_container nav li .arrow{
+    border-radius: 0px;
+    width: 15px;
+    height: 15px;
+    vertical-align: bottom;
+}
+
+.pagination_container nav li .prev{
+  display: inline-block;
+  border-bottom: 4px solid #8d0a15;
+  border-left: 4px solid #8d0a15;
+  transition: all 200ms ease;
+  transform: rotate(45deg);
+}
+.pagination_container nav li .prev:hover{
+  box-shadow: -4px 4px rgba(141, 10, 21, .5);
+}
+
+.pagination_container nav li .next{
+  display: inline-block;
+  border-top: 4px solid #8d0a15;
+  border-right: 4px solid #8d0a15;
+  transition: all 200ms ease;
+  transform: rotate(45deg);
+}
+.pagination_container nav li .next:hover{
+  box-shadow: 4px -4px rgba(141, 10, 21, .5);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
